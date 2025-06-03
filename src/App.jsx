@@ -9,9 +9,9 @@ const App = () => {
   ]);
 
   return (
-    <div className="w-full h-full bg-white-500 p-5 text-black">
-      <Create todos={todos} settodos={settodos}/>
-      <Read todos={todos} settodos={settodos}/>
+    <div className="w-screen h-screen bg-gray-500 p-5 flex text-white">
+      <Create todos={todos} settodos={settodos} />
+      <Read todos={todos} settodos={settodos} />
     </div>
   );
 };
