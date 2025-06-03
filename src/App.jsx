@@ -5,8 +5,21 @@ const App = () => {
   const [todos, settodos] = useState([
     { id: nanoid(), title: "Kaam karle bhaii!", isCompleted: false },
   ]);
+
+  const DeleteHandler = (id) => {
+    const filtertodo = todos.filter((todo) => todo.id != id);
+    settodos(filtertodo);
+  };
+
   const render = todos.map((item) => {
-    return <li key={item.id}>💌{item.title}</li>;
+    return (
+      <li className="list-decimal ml-5" key={item.id}>
+        {item.title}
+        <span className="text-lg ml-1.5" onClick={() => DeleteHandler(item.id)}>
+          🗑️
+        </span>
+      </li>
+    );
   });
   // console.log(render);
 
@@ -17,7 +30,7 @@ const App = () => {
     e.preventDefault();
 
     const newTodo = { id: nanoid(), title: title, isCompleted: isCompleted };
-    console.log(newTodo);
+    // console.log(newTodo);
 
     const copyTodos = [...todos];
     copyTodos.push(newTodo);
@@ -42,7 +55,10 @@ const App = () => {
         </button>
       </form>
       <h1 className="text-3xl font-thin">Rendering the data:</h1>
-      <ol className="text-xl font-thin text-[1.5rem] text-[#FA294E]"> {render}</ol>
+      <ol className="text-xl list-decimal pl-6 font-thin text-[1.5rem] text-[#FA294E]">
+        {" "}
+        {render}
+      </ol>
     </div>
   );
 };
