@@ -1,24 +1,39 @@
 import { nanoid } from "nanoid";
-import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const Create = (props) => {
   const todos = props.todos;
   const settodos = props.settodos;
 
-  const [title, settitle] = useState("");
-  const [isCompleted, setisCompleted] = useState(false);
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-    const newTodo = { id: nanoid(), title: title, isCompleted: isCompleted };
+  const submitHandler = (data) => {
+    // e.preventDefault();
+    data.isCompleted = false;
+    data.id = nanoid();
+    console.log(data);
+
+    //newTodo is Created when you submit the data
+    // const newTodo = { id: data.nanoid(), title: title, isCompleted: isCompleted };
     // console.log(newTodo);
 
-    const copyTodos = [...todos];
-    copyTodos.push(newTodo);
-    settodos(copyTodos);
+    //Add that data into TodoList
+    // const copyTodos = [...todos];
+    // copyTodos.push(newTodo);
+    // settodos(copyTodos);
     // settodos([...todos] , newTodo);
 
-    settitle("");
+    const copytodos = [...todos];
+    copytodos.push(data);
+    settodos(copytodos);
+
+    // settitle("");
+    reset();
   };
   return (
     <div className="w-[50%] p-10">
@@ -26,14 +41,17 @@ const Create = (props) => {
         Just <span className="text-blue-400">add</span> and{" "}
         <span className="text-red-400">delete</span> — that’s it.
       </h1>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={handleSubmit(submitHandler)}>
         <input
-          onChange={(e) => settitle(e.target.value)}
-          value={title}
-          className="border-b w-full outline-0 pl-7 p-4 text-2xl font-thin mb-10 rounded-4xl"
+          {...register("title", { required: "title can not be empty!" })}
+          className="capitalize border-b w-full outline-0 pl-7 p-4 text-2xl font-thin rounded-4xl"
           type="text"
           placeholder="Add Your Title! "
         />
+        <small className="text-red-400 block mb-6 ml-5 mt-2">
+          {errors?.title?.message}
+        </small>
+
         <button className="px-5 py-2 cursor-pointer font-extralight rounded m-2 text-3xl decoration-none border-1">
           Add the task
         </button>

@@ -1,7 +1,7 @@
 const Read = (props) => {
   const todos = props.todos;
   const settodos = props.settodos;
-  
+
   const DeleteHandler = (id) => {
     const filtertodo = todos.filter((todo) => todo.id != id);
     settodos(filtertodo);
@@ -10,7 +10,7 @@ const Read = (props) => {
   const render = todos.map((item) => {
     return (
       <li
-        className="bg-slate-300 text-black rounded-xl py-2 px-5 mb-2 flex justify-between items-center"
+        className="bg-slate-300 capitalize text-black rounded-xl py-2 px-5 mb-2 flex justify-between items-center"
         key={item.id}
       >
         {item.title}
@@ -30,9 +30,7 @@ const Read = (props) => {
         <span className="text-gray-600">You’ve</span> Added{" "}
         <span className="text-indigo-600">These</span>!
       </h1>
-      <ol className="text-2xl pl-6 font-thin list-decimal">
-        {render}
-      </ol>
+      <ol className="text-2xl pl-6 font-thin list-decimal">{render}</ol>
     </div>
   );
 };
