@@ -1,3 +1,5 @@
+import { Flip, toast } from "react-toastify";
+
 const Read = (props) => {
   const todos = props.todos;
   const settodos = props.settodos;
@@ -5,6 +7,11 @@ const Read = (props) => {
   const DeleteHandler = (id) => {
     const filtertodo = todos.filter((todo) => todo.id != id);
     settodos(filtertodo);
+    toast.error("Task Deleted!", {
+      position: "top-right",
+      autoClose: 1000,
+      transition: Flip,
+    });
   };
 
   const render = todos.map((item) => {

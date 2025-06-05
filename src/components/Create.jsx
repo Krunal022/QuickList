@@ -1,5 +1,7 @@
 import { nanoid } from "nanoid";
 import { useForm } from "react-hook-form";
+import { Flip, toast } from "react-toastify";
+import { Toastify } from "toastify";
 
 const Create = (props) => {
   const todos = props.todos;
@@ -31,6 +33,11 @@ const Create = (props) => {
     const copytodos = [...todos];
     copytodos.push(data);
     settodos(copytodos);
+    toast("🦄 Task Added!", {
+      position: "top-right",
+      autoClose: 1000,
+      transition: Flip,
+    });
 
     // settitle("");
     reset();
