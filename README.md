@@ -1,12 +1,43 @@
-# React + Vite
+# ✅ QuickList – React To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and minimal **To-Do list app** built with **React**. Quickly **add** or **delete** tasks with real-time feedback and **toast notifications**.
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [Click Here](https://quick-list-flame.vercel.app/)  
+📁 **Repo**: [GitHub](https://github.com/Krunal022/QuickList)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📝 Add new tasks instantly
+- 🗑️ Delete tasks easily
+- 🔔 Toast notifications for actions
+- 💅 Built with React & Tailwind CSS
+- 💡 Minimal UI and smooth UX
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Krunal022/QuickList.git
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+3. Start the app:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📸 Preview
+
+![image](https://github.com/user-attachments/assets/808db036-ab44-4935-ad91-b23be52865d4)
+
+---
