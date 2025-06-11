@@ -1,15 +1,17 @@
+import { useContext } from "react";
 import { Flip, toast } from "react-toastify";
+import { todocontext } from "../Wrapper";
 
-const Read = (props) => {
-  const todos = props.todos;
-  const settodos = props.settodos;
+const Read = () => {
+   const [todos,settodos] = useContext(todocontext)
+ 
 
   const DeleteHandler = (id) => {
     const filtertodo = todos.filter((todo) => todo.id != id);
     settodos(filtertodo);
     toast.error("Task Deleted!", {
       position: "top-right",
-      autoClose: 1000,
+      autoClose: 300,
       transition: Flip,
     });
   };
