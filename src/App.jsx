@@ -3,7 +3,7 @@ import Read from "./components/Read";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-gray-500 p-5 flex text-white">
+    <div className="w-full min-h-screen bg-gray-500 p-4 flex flex-col md:flex-row items-start justify-center gap-6 text-white">
       <Create />
       <Read />
     </div>
