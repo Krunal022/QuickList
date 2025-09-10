@@ -1,10 +1,20 @@
+# 📝 My First Todo App PWA 🚀
+
+Super excited! 🎉 I just added **PWA support** to my old Todo App!  
+Now you can **install it, use it offline**, and enjoy a smooth app-like experience.  
+
+## ⚡ Features
+- Add, edit & delete todos  
+- Mark tasks as done  
+- Installable & offline ready (PWA magic ✨)  
+
+Give it a try and enjoy! 🚀
+
 # ✅ QuickList – React To-Do App
 
 A clean and minimal **To-Do list app** built with **React**. Quickly **add** or **delete** tasks with real-time feedback, **toast notifications**, and **centralized state using Context API** (no more prop drilling!).
 
 🔗 **Live Demo**: [Click Here](https://quick-list-flame.vercel.app/)  
-📁 **Repo**: [GitHub](https://github.com/Krunal022/QuickList)
-
 ---
 
 ## ✨ Features
@@ -40,6 +50,13 @@ A clean and minimal **To-Do list app** built with **React**. Quickly **add** or 
 
 ## 📸 Preview
 
+
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/808db036-ab44-4935-ad91-b23be52865d4" alt="QuickList Preview" width="600" />
+  <img src="https://github.com/user-attachments/assets/579b7477-3b5d-451f-988c-e93ba5520380" alt="Mobile Preview" width="600" />
 </p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e9e2ba78-370b-4bce-8d38-6595262e011c" alt="Desktop Preview" width="600" />
+</p>
+
